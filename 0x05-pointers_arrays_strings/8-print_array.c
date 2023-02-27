@@ -1,23 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * *_strcpy - copies the string pointed to by src, including \0.
- *@src: pointer.
- *@dest: pointer.
- *Return: the pointer to dest.
+ * print_array - prints an array.
+ * @a: the array to print.
+ * @n: array's length
  */
 
-char *_strcpy(char *dest, char *src)
+void print_array(int *a, int n)
 {
-	int i, length;
+	int i;
 
-	for (length = 0; src[length] != '\0'; length++)
+	for (i = 0; i < n; i++)
 	{
+		printf("%d", a[i]);
+		if (i < n - 1)
+		{
+			printf(", ");
+		}
 	}
-
-	for (i = 0; i <= length ; i++)
-	{
-		dest[i] = src[i];
-	}
-	return (dest);
+	printf("\n");
 }
