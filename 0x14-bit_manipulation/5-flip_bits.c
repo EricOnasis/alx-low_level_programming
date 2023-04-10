@@ -10,7 +10,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int i, flip = 0;
 
-	for (i = 0; i < 32; i++)
+	for (i = 0; i < 64; i++)
 	{
 		if ((m & 1) != (n & 1))
 			flip += 1;
