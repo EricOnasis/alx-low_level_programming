@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
 	}
 
 	firstnum = atoi(argv[1]);
-        secondnum = atoi(argv[2]);
-        result = firstnum * secondnum;
+	secondnum = atoi(argv[2]);
+	result = firstnum * secondnum;
 
 	printf("%d", result);
 
