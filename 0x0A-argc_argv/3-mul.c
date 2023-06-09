@@ -13,16 +13,18 @@ int main(int argc, char *argv[])
 {
 	int firstnum, secondnum, result;
 
-	firstnum = atoi(argv[1]);
-	secondnum = atoi(argv[2]);
-	result = firstnum * secondnum;
-
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	firstnum = atoi(argv[1]);
+        secondnum = atoi(argv[2]);
+        result = firstnum * secondnum;
+
 	printf("%d", result);
+
 	return (0);
 
 }
