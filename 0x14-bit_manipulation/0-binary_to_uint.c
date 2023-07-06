@@ -5,30 +5,19 @@
  * @b: The string with binary number
  * Return: Returns the converted number
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int converted = 0;
+	int conv;
+	unsigned int deci = 0;
 
-	if (b == NULL)
-	{
-	return (0);
-	}
-
-	while (*b != '\0')
-	{
-	if (*b == '0' || *b == '1')
-	{
-
-		converted <<= 1;
-		converted += (*b - '0');
-	}
-	else
-	{
+	if (!b)
 		return (0);
-	}
-	b++;
-	}
 
-return (converted);
+	for (conv = 0; b[conv]; conv++)
+		{
+		if (b[conv] < '0' || b[conv] > '1')
+			return (0);
+		deci = 2 * deci + (b[conv] - '0');
+		}
+	return (deci);
 }
